@@ -70,3 +70,4 @@
 * Drew is the Scrum Master, Arik is GitHub Repo Manager. 
 * GitHub Project has our task boards and project documentation (see documentation folder), Slack is official communication, Remo is where meetings take place. 
 * This document is in draft form as of 11 am, the group can recommend changes until 4 pm on 8/10/20. At that time, it will be considered final. 
+* Jen will submit the daily assignment in canvas on behalf of the entire team by 4 pm each day. 
