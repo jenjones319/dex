@@ -67,7 +67,7 @@
 
 * Work times are 9-5, lunch from 12-1. Stand-ups are 9 am (ish); 1 pm; and 3 pm (if Scrum Master thinks it's needed).
 * MVP plan is the source of truth for what we're delivering, see above on how it can be modified.
-* Drew is the Scrum Master, Arik is GitHub Repo Manager. 
+* Drew is the Scrum Master, Arik is GitHub Repo Manager (handles all of the PR approvals and merges, lets people know when they need to pull from master). Byron will approve Arik's PRs. 
 * GitHub Project has our task boards and project documentation (see documentation folder), Slack is official communication, Remo is where meetings take place. 
 * This document is in draft form as of 11 am, the group can recommend changes until 4 pm on 8/10/20. At that time, it will be considered final. 
 * Jen will submit the daily assignment in canvas on behalf of the entire team by 4 pm each day. 
