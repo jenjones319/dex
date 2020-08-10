@@ -1,4 +1,4 @@
-# Group Project: Team Agreement
+# Group Project: Team Agreement: Jen Jones, Byron Keyes, Arik Mackenburg, Drew Scott
 
 * You will be required to make a Team agreement. This will be used as the baseline and structure requirements for how your team will run during project week.
 
