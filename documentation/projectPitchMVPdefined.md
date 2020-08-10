@@ -1,4 +1,4 @@
-## Project Pitch
+## Project Pitch: Jen Jones, Byron Keyes, Arik Mackenburg, Drew Scott
 
 ### Project Name: DeltaDex
 
