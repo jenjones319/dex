@@ -1,11 +1,9 @@
-CREATE TABLE IF NOT EXISTS pokedex (
-    id SERIAL PRIMARY KEY, 
-    name VARCHAR (100),
-    image_url VARCHAR (500),
-    strength VARCHAR (500),
-    author VARCHAR (500),
-    descriptions VARCHAR (500),
-    category VARCHAR (500)
+CREATE TABLE IF NOT EXISTS starWarsDex (
+  id SERIAL PRIMARY KEY,
+  ImagUrl VARCHAR(100),
+  name VARCHAR (500) NOT NULL,
+  passenger VARCHAR (500) NOT NULL,
+  model VARCHAR (100) NOT NULL,
+  length VARCHAR(5000) NOT NULL,
+  cargo_capacity VARCHAR (8000) NOT NULL,
 );
-
-/* update table fields to reflect what is available in pokeapi.*/
