@@ -20,9 +20,11 @@ OUT - What will your product not do.
 * This web app is not password protected or requiring a login. 
 * This web app does not search for other items. 
 
-Minimum Viable Product vs
-
 What will your MVP functionality be?
+* The web app will provide users the option to search a catalog of Star Wars vehicles by model or name. 
+* The web app will provide information via the API including vehicle name, model, cargo capacity, image, passengers, length, and more. 
+* The web app will display mobile-friendly results based on the search query. 
+* The web app will provide the user the option to browse through the entire vehicle catalog.
 
 What are your stretch goals?
 
