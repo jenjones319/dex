@@ -21,7 +21,7 @@ app.use(cors());
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
 
-//Route Functionality
+//Route Handlers
 function homeHandler(request,response) {
   let viewModel = {
 
@@ -69,6 +69,6 @@ function Vehicles(vehicle){
   this.vehLength = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
 }
-// Listener
+// Event Listener
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
