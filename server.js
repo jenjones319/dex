@@ -19,7 +19,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.get('/',homeHandler);
-app.post('/search',choosePokemon);
+app.post('/search',getVehicleData);
 
 //Route Functionality
 function homeHandler(request,response) {
@@ -27,6 +27,13 @@ function homeHandler(request,response) {
 
   }
   response.status(200).render('pages/index',viewModel);
+}
+
+function errorHandler(error, response) {
+  let viewModel = {
+    error: error
+  }
+  response.status(500).render('pages/error', viewModel);
 }
 
 function getVehicleData(request,response) {
@@ -38,7 +45,7 @@ function getVehicleData(request,response) {
     .then(vehicleDataResponse => {
       const arrayVehicleData = vehicleDataResponse.body;
       const vehiclesResult = [];
-      arrayOfVehicleData.foreach(vehicle => {
+      arrayVehicleData.foreach(vehicle => {
         vehiclesResult.push(new Vehicles(vehicle))
       })
       return vehiclesResult;
