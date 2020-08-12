@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS starWarsDex (
   passenger VARCHAR (500) NOT NULL,
   model VARCHAR (100) NOT NULL,
   length VARCHAR(5000) NOT NULL,
-  cargo_capacity VARCHAR (8000) NOT NULL,
+  cargo_capacity VARCHAR (8000) NOT NULL
 );
