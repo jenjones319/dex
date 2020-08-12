@@ -1,11 +1,11 @@
-# Project Name: Pokedex
+# Project Name: StarWarsDex
 
 ## Project Team Members: Jennifer Jones, Byron Keyes, Arik Mackenburg, Drew Scott
 
 ### Purpose of the Project: 
 
-* This app is a resource for a player to use to find information about Pokemon, kind of like a game guide. This app is geared toward users who are playing electronically, not with physical cards. Some of the things in a typical game guide: What level does this Pokemon evolve, what is its typing, strong and weak points, etc. 
+* This app is a resource for Star Wars fans to use to find information about Star Wars vehiclese. This web app is geared toward users wanting to know more about Star Wars vehicles who are on mobile devices who may be watching a movie, doing a trivia thing, putting together a Star Wars LEGO set, playing a Star Wars video game,  etc.  
 
-* There are more than 850 Pokemon so it is difficult even for active players to remember all the information they need to play the game. This is a resource for casual and advanced players. This is a comprehensive resource. The database tracks Pokemon you have added to your team of six.  In app will feature a button that a user can toggle on/off to indicate which Pokemon are on their team. 
+* There are nearly 40 Star Wars vehicles in the API. This is a resource for multiple different types of users and this web app is a comprehensive resource. The database includes links to the image files that the API does not serve up.  In the app, users can also browse through all vehicle names or choose one to search. 
 
-* API: https://pokeapi.co/ -- An open RESTful API for Pokémon data.
+* API: https://swapi.dev/ - Star Wars API.
