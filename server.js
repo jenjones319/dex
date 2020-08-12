@@ -38,9 +38,10 @@ function errorHandler(error, response) {
 
 function getVehicleData(request,response) {
   const url = 'https://swapi.dev/api/vehicles/';
+  const {name}=request.body
   superagent.get(url)
     .query({
-      format: 'json'
+      search:name
     })
     .then(vehicleDataResponse => {
       const arrayVehicleData = vehicleDataResponse.body.results;
