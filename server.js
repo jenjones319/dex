@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.use(cors());
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
@@ -31,7 +31,7 @@ function homeHandler(request,response) {
 
 function errorHandler(error, response) {
   let viewModel = {
-    error: error
+    error: erroro
   }
   response.status(500).render('pages/error', viewModel);
 }
@@ -43,9 +43,9 @@ function getVehicleData(request,response) {
       format: 'json'
     })
     .then(vehicleDataResponse => {
-      const arrayVehicleData = vehicleDataResponse.body;
+      const arrayVehicleData = vehicleDataResponse.body.results;
       const vehiclesResult = [];
-      arrayVehicleData.foreach(vehicle => {
+      arrayVehicleData.forEach(vehicle => {
         vehiclesResult.push(new Vehicles(vehicle))
       })
       return vehiclesResult;
@@ -62,7 +62,7 @@ function getVehicleData(request,response) {
 }
 
 function Vehicles(vehicle){
-
+  
   this.vehName = vehicle.name;
   this.passenger = vehicle.passenger;
   this.model = vehicle.model;
