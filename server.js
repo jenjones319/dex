@@ -29,11 +29,11 @@ function homeHandler(request,response) {
   response.status(200).render('pages/index',viewModel);
 }
 
-function errorHandler(error, response) {
-  let viewModel = {
-    error: erroro
-  }
-  response.status(500).render('pages/error', viewModel);
+function errorHandler(error, request, response, next) {
+  // let viewModel = {
+  //   error: error
+  // }
+  response.status(500).json({error: true,message: error.message})
 }
 
 function getVehicleData(request,response) {
@@ -63,12 +63,13 @@ function getVehicleData(request,response) {
 }
 
 function Vehicles(vehicle){
-  
+
   this.name = vehicle.name;
   this.passenger = vehicle.passenger;
   this.model = vehicle.model;
   this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
+  this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
 }
 // Listener
 
