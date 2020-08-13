@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vechile Search</title>
+  <%- include('./layout/style-link') %>
 </head>
 <body>
   <header>
@@ -11,6 +12,7 @@
   <main>
     <h1>Results</h1>
     <% vehicles.forEach( vehicle => { %>
+      <img src="Images/<%=vehicle.image_url%>"/>
       <h2>Vehicle Name</h2>
       <h3><%=vehicle.name%></h3>
       <h2>Vehicle Model</h2>
