@@ -38,9 +38,10 @@ function errorHandler(error, response) {
 
 function getVehicleData(request,response) {
   const url = 'https://swapi.dev/api/vehicles/';
+  const {name}=request.body
   superagent.get(url)
     .query({
-      format: 'json'
+      search:name
     })
     .then(vehicleDataResponse => {
       const arrayVehicleData = vehicleDataResponse.body.results;
@@ -53,7 +54,7 @@ function getVehicleData(request,response) {
     .then(results => {
       console.log(results);
       let viewModelObject = {vehicles: results};
-      response.render('index', viewModelObject)
+      response.render('pages/results', viewModelObject)
     })
     .catch(err => {
       console.log(err);
@@ -63,10 +64,10 @@ function getVehicleData(request,response) {
 
 function Vehicles(vehicle){
   
-  this.vehName = vehicle.name;
+  this.name = vehicle.name;
   this.passenger = vehicle.passenger;
   this.model = vehicle.model;
-  this.vehLength = vehicle.length;
+  this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
 }
 // Event Listener
