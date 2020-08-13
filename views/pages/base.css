@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: News Cycle, sans-serif;
+}
+
+a {
+    color: #00FFFF;
+}
+
+a:hover {
+    color: darkgray;    
+}
