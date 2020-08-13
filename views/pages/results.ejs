@@ -11,10 +11,18 @@
   <main>
     <h1>Results</h1>
     <% vehicles.forEach( vehicle => { %>
+      <h2>Vehicle Name</h2>
       <h3><%=vehicle.name%></h3>
+      <h2>Vehicle Model</h2>
+      <p><%=vehicle.model%></p>
+      <h2>Vehicle Length</h2>
+      <p><%=vehicle.length%></p>
+      <h2>Vehicle Cargo Capacity</h2>
+      <p><%=vehicle.cargo_capacity%></p>
     <% }) %>
   </main>
   <footer>
+    <%- include('./layout/footer') %>
   </footer>
   
 </body>
