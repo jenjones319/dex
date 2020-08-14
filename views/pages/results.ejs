@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vechile Search</title>
+  <%- include('./layout/style-link') %>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <h1>Results</h1>
+    <% vehicles.forEach( vehicle => { %>
+      <img src="Images/<%=vehicle.image_url%>"/>
+      <h2>Vehicle Name</h2>
+      <h3><%=vehicle.name%></h3>
+      <h2>Vehicle Model</h2>
+      <p><%=vehicle.model%></p>
+      <h2>Vehicle Length</h2>
+      <p><%=vehicle.length%></p>
+      <h2>Vehicle Cargo Capacity</h2>
+      <p><%=vehicle.cargo_capacity%></p>
+    <% }) %>
+  </main>
+  <footer>
+    <%- include('./layout/footer') %>
+  </footer>
+  
+</body>
+</html>

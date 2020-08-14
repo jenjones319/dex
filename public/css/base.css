@@ -1,0 +1,17 @@
+body, form {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'News Cycle', sans-serif;
+    display: grid;
+    /*grid-template-columns: 3;
+    grid-template-rows: 5; */
+}
+
+a {
+    color: #00FFFF;
+}
+
+a:hover {
+    color: darkgray;    

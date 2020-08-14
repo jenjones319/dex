@@ -16,12 +16,12 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.use(cors());
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
 
-//Route Functionality
+//Route Handlers
 function homeHandler(request,response) {
   let viewModel = {
 
@@ -29,23 +29,24 @@ function homeHandler(request,response) {
   response.status(200).render('pages/index',viewModel);
 }
 
-function errorHandler(error, response) {
-  let viewModel = {
-    error: error
-  }
-  response.status(500).render('pages/error', viewModel);
+function errorHandler(error, request, response, next) {
+  // let viewModel = {
+  //   error: error
+  // }
+  response.status(500).json({error: true,message: error.message})
 }
 
 function getVehicleData(request,response) {
-  const url = 'https://swapi.dev/api/vehicles/4/';
+  const url = 'https://swapi.dev/api/vehicles/';
+  const {name}=request.body
   superagent.get(url)
     .query({
-      format: 'json'
+      search:name
     })
     .then(vehicleDataResponse => {
-      const arrayVehicleData = vehicleDataResponse.body;
+      const arrayVehicleData = vehicleDataResponse.body.results;
       const vehiclesResult = [];
-      arrayVehicleData.foreach(vehicle => {
+      arrayVehicleData.forEach(vehicle => {
         vehiclesResult.push(new Vehicles(vehicle))
       })
       return vehiclesResult;
@@ -53,7 +54,7 @@ function getVehicleData(request,response) {
     .then(results => {
       console.log(results);
       let viewModelObject = {vehicles: results};
-      response.render('index', viewModelObject)
+      response.render('pages/results', viewModelObject)
     })
     .catch(err => {
       console.log(err);
@@ -63,12 +64,13 @@ function getVehicleData(request,response) {
 
 function Vehicles(vehicle){
 
-  this.vehName = vehicle.name;
+  this.name = vehicle.name;
   this.passenger = vehicle.passenger;
   this.model = vehicle.model;
-  this.vehLength = vehicle.length;
+  this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
+  this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
 }
-// Listener
+// Event Listener
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
