@@ -8,18 +8,19 @@
   <%- include('./layout/style-link') %>
 </head>
 <body>
-  <header>
+  <div class="grid-container">
+  <div class="item1"><header>
     <h1>Search for Star Wars Vehicles:</h1>
-  </header>
-  <main>
+  </header></div>
+  <div class="item2"><main>
     <form action="/search" method="post">
       <input type="text" name="name" placeholder="Name" required><br>
       <button type="submit">Submit Vehicle Search</button>
     </form>
-  </main>
-  <footer>
+  </main></div>
+  <div class="item3"><footer>
     <%- include('./layout/footer') %>
-  </footer>
-  
+  </footer></div>
+  </div>
 </body>
 </html>
