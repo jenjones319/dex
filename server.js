@@ -65,7 +65,6 @@ function getVehicleData(request,response) {
 function Vehicles(vehicle){
 
   this.name = vehicle.name;
-  this.passenger = vehicle.passenger;
   this.model = vehicle.model;
   this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
