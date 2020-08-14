@@ -4,5 +4,6 @@ body, form {
     background-color: black;
     color: white;
     font-family: 'News Cycle', sans-serif;
+    display: grid;
 }
  
