@@ -6,3 +6,8 @@ CREATE TABLE IF NOT EXISTS vehicles (
   "length" VARCHAR(5000) NOT NULL,
   cargo_capacity VARCHAR (8000) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS recentSearches(
+id SERIAL PRIMARY KEY,
+search VARCHAR(500) NOT NULL
+);
