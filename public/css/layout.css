@@ -1,69 +1,54 @@
-body {
-    margin: 0;
-    font-family: 'News Cycle', sans-serif;
-  }
 
-  .item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+.item1 { 
+  grid-area: header;
+  background-color: black;
+  color: cyan;
+  font-size: 48px;
+  padding: 10px;
+  text-align: center;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.item2 { 
+  grid-area: menu;
+  background-color: black;
+  color: #ffe81f; 
+  text-align: center;
+}
+
+.item3 { 
+  grid-area: main; 
+  background-color: black;
+  color: cyan;
+  max-height: 200px;
+  max-width: 500px;
+  border-style: solid, 3px;
+  padding: 20px;
+  text-align: center;
+  display: inline;
+  
+}
+
 .item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item5 { 
+  grid-area: footer;
+  background-color: black;
+  color: cyan;
+  font-size: 28px;
+  padding: 10px; 
+  text-align: center;
+
+}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
+    'header header header header header header header header'
+    'menu main main main main main main main'
+    'footer footer footer footer footer footer footer footer';
+  grid-gap: 2px;
+  background-color: black;
   padding: 10px;
 }
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-  .header, h1 {
-    background-color: black;
-    color: cyan;
-    font-size: 48px;
-    padding: 10px;
-    text-align: center;
-  } 
   
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .content {
-    background-color: #ddd;
-    padding: 10px;
-    height: 200px;
-    text-align: center;
-  }
-  
-  /* Style the footer */
-  .footer, h2 {
-    background-color: black;
-    color: cyan;
-    padding: 10px;
-  }  
