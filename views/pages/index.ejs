@@ -8,16 +8,20 @@
   <%- include('./layout/style-link') %>
 </head>
 <body>
-  <div class="grid-container">
-  <header><div class="item1">
-    <h1>Search for Star Wars Vehicles:</h1>
-  </div>
+  <section id="grid-container">
+  <header>
+    <div class="item1">
+      <h1>Search for Star Wars Vehicles:</h1>
   </header>
-  <div class="item2"><nav>
-    <a href="">About Us</a>
+    </div>
+<main>
+<nav>
+  <div class="item2">
+    <a href="about.ejs">About Us</a>
     <a href="">Contact</a>
     <a href="">Admin Login</a>
-  </nav>
+    <a href="garage.ejs">Garage</a>
+</nav>
   </div>
   <div class="item3"><main>
     <form action="/search" method="get">
