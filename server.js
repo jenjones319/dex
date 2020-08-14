@@ -27,6 +27,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
+app.post('/garage',makeNewVehicle);
 
 //Route Handlers
 function homeHandler(request,response) {
@@ -42,6 +43,17 @@ function errorHandler(error, request, response, next) {
   // }
   response.status(500).json({error: true,message: error.message})
 }
+
+function makeNewVehicle(request,response) {
+  let SQL = 'INSERT INTO vehicles (imag_url, name, model, length, cargo_capacity) VALUES ($1,$2,$3,$4,$5);';
+  let {imag_url, name, model, length, cargo_capacity } = request.body;
+  let values = [imag_url, name, model, length, cargo_capacity];
+
+  return client.query(SQL, values)
+    .then(response.redirect('/'))
+}
+
+
 
 function getVehicleData(request,response) {
   const url = 'https://swapi.dev/api/vehicles/';

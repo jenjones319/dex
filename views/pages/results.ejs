@@ -22,6 +22,15 @@
       <h2>Vehicle Cargo Capacity</h2>
       <p><%=vehicle.cargo_capacity%></p>
     <% }) %>
+    <form action="">
+      <input type="hidden" name="name" value="<%= vehicle.name %>"/>
+      <input type="hidden" name="model" value="<%= vehicle.model %>"/>
+      <input type="hidden" name="length" value="<%= vehicle.length %>"/>
+      <input type="hidden" name="cargo" value="<%= vehicle.cargo_capacity %>"/>
+      <input type="hidden" name="imag_url" value="<%= vehicle.imag_url %>"/>
+      <button type="submit">Save To Garage</button> 
+    </form>
+<% }) %>
   </main>
   <footer>
     <%- include('./layout/footer') %>
