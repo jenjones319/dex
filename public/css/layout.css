@@ -1,13 +1,25 @@
 
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header right'
+    'menu main right'
+    'menu footer right';
+  grid-gap: 2px;
+  background-color: black;
+  padding: 10px;
+}
+
 .item1 { 
   grid-area: header;
   background-color: black;
   color: cyan;
-  font-size: 48px;
-  padding: 10px;
+  font-size: 36px;
+  margin: 20px;
+  padding: 20px;
   text-align: center;
   max-height: 200px;
-  max-width: 100%;
+  max-width: 480px;
 }
 
 .item2 { 
@@ -15,40 +27,50 @@
   background-color: black;
   color: #ffe81f; 
   text-align: center;
+  max-width: 480px;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
 }
 
 .item3 { 
   grid-area: main; 
   background-color: black;
   color: cyan;
-  max-height: 200px;
-  max-width: 500px;
   border-style: solid, 3px;
   padding: 20px;
   text-align: center;
-  display: inline;
-  
+  max-width: 200px;
 }
 
-.item4 { grid-area: right; }
+.item4 { 
+  grid-area: right;
+  background-color: darkgray;
+  color: black;
+  font-size: 28px;
+  max-width: 200px;
+  max-height: 100px;
+   }
+
 .item5 { 
   grid-area: footer;
   background-color: black;
   color: cyan;
   font-size: 28px;
-  padding: 10px; 
+  margin: 20px;
+  padding: 20px;
   text-align: center;
+  max-height: 200px;
+  max-width: 480px;
+}  
 
+.button {
+  background-color: darkgray;
+  color: #ffe81f;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  max-height: 200px;
+  max-width: 480px;
 }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header header header'
-    'menu main main main main main main main'
-    'footer footer footer footer footer footer footer footer';
-  grid-gap: 2px;
-  background-color: black;
-  padding: 10px;
-}
-  

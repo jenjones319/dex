@@ -9,9 +9,10 @@
 </head>
 <body>
   <div class="grid-container">
-  <div class="item1"><header>
+  <header><div class="item1">
     <h1>Search for Star Wars Vehicles:</h1>
-  </header></div>
+  </div>
+  </header>
   <div class="item2"><nav>
     <a href="">About Us</a>
     <a href="">Contact</a>
@@ -19,11 +20,12 @@
   </nav>
   </div>
   <div class="item3"><main>
-    <form action="/search" method="post">
+    <form action="/search" method="get">
       <input type="text" name="name" placeholder="Name" required><br>
       <button type="submit">Submit Vehicle Search</button>
     </form>
-  </main></div>
+  </div>
+  </main>
   <div class="item5"><footer>
     <%- include('./layout/footer') %>
   </footer></div>
