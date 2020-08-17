@@ -65,6 +65,7 @@ function getVehicleData(request,response) {
     .then(vehicleDataResponse => {
       const arrayVehicleData = vehicleDataResponse.body.results;
       const vehiclesResult = [];
+      console.log(vehiclesResult);
       arrayVehicleData.forEach(vehicle => {
         vehiclesResult.push(new Vehicles(vehicle))
       })
@@ -89,6 +90,7 @@ function Vehicles(vehicle){
   this.cargo_capacity = vehicle.cargo_capacity;
   this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
 }
+
 // Event Listener
 client.connect()
   .then(() => {
