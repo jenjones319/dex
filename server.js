@@ -9,9 +9,9 @@ const superagent = require('superagent');
 const pg = require('pg');
 
 
-//const{DATABASE_URL} = process.env;
-//if (!DATABASE_URL){throw 'DATABASE_URL IS MISSING'}
-//const client = new pg.Client(DATABASE_URL);
+const{DATABASE_URL} = process.env;
+if (!DATABASE_URL){throw 'DATABASE_URL IS MISSING'}
+const client = new pg.Client(DATABASE_URL);
 
 
 
@@ -65,6 +65,7 @@ function getVehicleData(request,response) {
     .then(vehicleDataResponse => {
       const arrayVehicleData = vehicleDataResponse.body.results;
       const vehiclesResult = [];
+      console.log(vehiclesResult);
       arrayVehicleData.forEach(vehicle => {
         vehiclesResult.push(new Vehicles(vehicle))
       })
@@ -88,4 +89,10 @@ function Vehicles(vehicle){
   this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
   this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
-}
+
+// Event Listener
+client.connect()
+  .then(() => {
+    app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+  })
+  .catch(console.error)
