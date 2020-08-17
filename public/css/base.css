@@ -6,4 +6,11 @@ body, form {
     font-family: 'News Cycle', sans-serif;
     display: grid;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: cyan;
+}
  
