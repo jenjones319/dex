@@ -52,7 +52,7 @@ function makeNewVehicle(request,response) {
   let values = [image_url, name, model, length, cargo_capacity];
 
   return client.query(SQL, values)
-    .then(response.redirect('/'))
+    .then(response.redirect('/garage'))
 }
 
 
