@@ -25,6 +25,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT;
 app.use(cors());
+app.get('/about',getAboutData); 
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
 app.post('/garage',makeNewVehicle);
@@ -80,6 +81,13 @@ function getVehicleData(request,response) {
       errorHandler(err, request, response);
     });
 }
+
+function getAboutData (request, response) {
+let viewModel = {
+  }
+  response.status(200).render('pages/about',viewModel);
+}
+
 
 function Vehicles(vehicle){
 
