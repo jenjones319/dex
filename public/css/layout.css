@@ -3,7 +3,7 @@
     background-color: black;
     color: cyan;
   }
-
+}
 .grid-container > * {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
@@ -47,4 +47,11 @@ h2 {
   grid-column: 2;
   color: cyan;
   font-size: 28px;
-}  
+}
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+button {
+  width: 50%;
+}

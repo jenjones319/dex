@@ -11,6 +11,7 @@
   </header>
   <main>
     <h1>Results</h1>
+    <div class="result">
     <% vehicles.forEach( vehicle => { %>
       <section>
         <img src="images/<%=vehicle.image_url%>"/>
@@ -32,6 +33,7 @@
         </form>
       </section>
     <% }) %>
+    </div>
   </main>
   <footer>
     <%- include('./layout/footer') %>
