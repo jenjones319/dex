@@ -1,21 +1,15 @@
 @media only screen and (max-width: 600px) {
   body {
     background-color: black;
-    color: cyan;
   }
-}
+
 .grid-container > * {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
-  grid-gap: .5rem;  
-  padding: .5rem;
+  grid-gap: 5px;  
+  padding: 5px;
   background-color: black;
-  color: cyan;
   }
-
-h2 {
-  margin: 0;
-}
 
 .item1 { 
   background-color: black;
@@ -37,7 +31,7 @@ h2 {
   background-color: black;
   grid-row: 3;
   grid-column: 2;
-  font-size: 22px;
+  font-size: 36px;
   color: cyan;
 }
 
@@ -45,13 +39,7 @@ h2 {
   background-color: black;
   grid-row: 5;
   grid-column: 2;
+  padding 5px;
   color: cyan;
   font-size: 28px;
-}
-.result {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-button {
-  width: 50%;
 }

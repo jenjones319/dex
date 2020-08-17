@@ -1,16 +1,46 @@
-body, form {
+body {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     background-color: black;
     color: cyan;
     font-family: 'News Cycle', sans-serif;
     display: grid;
+    font-size: 28px;
 }
 a {
     text-decoration: none;
+    font-size: 18px;
     color: white;
 }
 a:hover {
+    color: #ffe81f;
+}
+
+footer {
+    font-size: 16px;
+    color: #ffe81f;
+    margin: 10px;
+}
+
+img {
+    width: 175px;
+    height: 200px;
+    padding: 10px;
+    border: solid;
+    border-color: white;
+    border-width: 3px;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+}
+
+h1, h2 {
+    font-size: 24px;
     color: cyan;
+    margin: 3px;
+    padding: 6px;
 }
  
