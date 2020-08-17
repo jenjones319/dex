@@ -13,9 +13,21 @@
     <h1>Star Wars Garage</h1>
 </header>
 <main>
-<section id="garage-container">
-
-</section>
+    <div class="result">
+        <% vehicles.forEach( vehicle => { %>
+          <section>
+            <img src="images/<%=vehicle.image_url%>"/>
+            <h2>Vehicle Name</h2>
+            <h3><%=vehicle.name%></h3>
+            <h2>Vehicle Model</h2>
+            <p><%=vehicle.model%></p>
+            <h2>Vehicle Length</h2>
+            <p><%=vehicle.length%></p>
+            <h2>Vehicle Cargo Capacity</h2>
+            <p><%=vehicle.cargo_capacity%></p>
+          </section>
+        <% }) %>
+        </div>
 </main>
 <footer>
     <h2>Copyright <%= new Date().getFullYear() %></h2>
