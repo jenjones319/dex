@@ -12,29 +12,29 @@
   <main>
     <h1>Results</h1>
     <% vehicles.forEach( vehicle => { %>
-      <img src="Images/<%=vehicle.image_url%>"/>
-      <h2>Vehicle Name</h2>
-      <h3><%=vehicle.name%></h3>
-      <h2>Vehicle Model</h2>
-      <p><%=vehicle.model%></p>
-      <h2>Vehicle Length</h2>
-      <p><%=vehicle.length%></p>
-      <h2>Vehicle Cargo Capacity</h2>
-      <p><%=vehicle.cargo_capacity%></p>
+      <section>
+        <img src="images/<%=vehicle.image_url%>"/>
+        <h2>Vehicle Name</h2>
+        <h3><%=vehicle.name%></h3>
+        <h2>Vehicle Model</h2>
+        <p><%=vehicle.model%></p>
+        <h2>Vehicle Length</h2>
+        <p><%=vehicle.length%></p>
+        <h2>Vehicle Cargo Capacity</h2>
+        <p><%=vehicle.cargo_capacity%></p>
+        <form action="/garage" method="post">
+          <input type="hidden" name="name" value="<%= vehicle.name %>"/>
+          <input type="hidden" name="model" value="<%= vehicle.model %>"/>
+          <input type="hidden" name="length" value="<%= vehicle.length %>"/>
+          <input type="hidden" name="cargo" value="<%= vehicle.cargo_capacity %>"/>
+          <input type="hidden" name="imag_url" value="<%= vehicle.imag_url %>"/>
+          <button type="submit">Save To Garage</button> 
+        </form>
+      </section>
     <% }) %>
-    <form action="">
-      <input type="hidden" name="name" value="<%= vehicle.name %>"/>
-      <input type="hidden" name="model" value="<%= vehicle.model %>"/>
-      <input type="hidden" name="length" value="<%= vehicle.length %>"/>
-      <input type="hidden" name="cargo" value="<%= vehicle.cargo_capacity %>"/>
-      <input type="hidden" name="imag_url" value="<%= vehicle.imag_url %>"/>
-      <button type="submit">Save To Garage</button> 
-    </form>
-<% }) %>
   </main>
   <footer>
     <%- include('./layout/footer') %>
   </footer>
-  
 </body>
 </html>
