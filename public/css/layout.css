@@ -11,10 +11,6 @@
   background-color: black;
   }
 
-h2 {
-  margin: 0;
-}
-
 .item1 { 
   background-color: black;
   grid-row: 1;
