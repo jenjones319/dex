@@ -89,7 +89,7 @@ function Vehicles(vehicle){
   this.length = vehicle.length;
   this.cargo_capacity = vehicle.cargo_capacity;
   this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
-}
+
 // Event Listener
 client.connect()
   .then(() => {

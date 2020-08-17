@@ -2,7 +2,7 @@ body, form {
     margin: 0;
     padding: 0;
     background-color: black;
-    color: white;
+    color: cyan;
     font-family: 'News Cycle', sans-serif;
     display: grid;
 }
