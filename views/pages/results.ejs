@@ -17,14 +17,14 @@
     <% vehicles.forEach( vehicle => { %>
       <section>
         <img src="images/<%=vehicle.image_url%>"/>
-        <h2>Vehicle Name</h2>
-        <h3><%=vehicle.name%></h3>
-        <h2>Vehicle Model</h2>
+        <h3>Vehicle Name</h3>
+        <p><%=vehicle.name%></p>
+        <h3>Vehicle Model</h3>
         <p><%=vehicle.model%></p>
-        <h2>Vehicle Length</h2>
-        <p><%=vehicle.length%></p>
-        <h2>Vehicle Cargo Capacity</h2>
-        <p><%=vehicle.cargo_capacity%></p>
+        <h3>Vehicle Length</h3>
+        <p><%=vehicle.length%> feet</p>
+        <h3>Vehicle Cargo Capacity</h3>
+        <p><%=vehicle.cargo_capacity%> pounds</p>
         <form action="/garage" method="post">
           <input type="hidden" name="name" value="<%= vehicle.name %>"/>
           <input type="hidden" name="model" value="<%= vehicle.model %>"/>
