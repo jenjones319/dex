@@ -90,11 +90,11 @@ function getAboutData (request, response) {
   response.status(200).render('pages/about',viewModel);
 }
 
-function garageHandler (request, response) {
-  let viewModel = {
+function garageHandler(request, response) {
+  let SQL = 'SELECT * from vehicles;';
 
-  }
-  response.status(200).render('pages/garage',viewModel);
+  return client.query(SQL)
+    .then(results => response.render('pages/garage', { vehicles: results.rows }))
 }
 
 function Vehicles(vehicle){
