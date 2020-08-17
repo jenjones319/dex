@@ -89,9 +89,3 @@ function Vehicles(vehicle){
   this.cargo_capacity = vehicle.cargo_capacity;
   this.image_url = `${vehicle.name.toLowerCase().split(' ').join('')}.jpg`;
 }
-// Event Listener
-//client.connect()
-//  .then(() => {
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
-//  })
-//  .catch(console.error)
