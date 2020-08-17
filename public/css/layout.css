@@ -3,7 +3,7 @@
     background-color: black;
     color: cyan;
   }
-}
+
 .grid-container > * {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
@@ -37,7 +37,7 @@ h2 {
   background-color: black;
   grid-row: 3;
   grid-column: 2;
-  font-size: 22px;
+  font-size: 36px;
   color: cyan;
 }
 
@@ -48,10 +48,8 @@ h2 {
   color: cyan;
   font-size: 28px;
 }
-.result {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-button {
-  width: 50%;
+
+.p {
+  color: #ffe81f;
+  text-align: justify;
 }
