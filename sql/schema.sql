@@ -1,6 +1,7 @@
+DROP TABLE IF EXISTS vehicles;
 CREATE TABLE IF NOT EXISTS vehicles (
   id SERIAL PRIMARY KEY,
-  Imag_Url VARCHAR(100),
+  image_Url VARCHAR(100),
   "name" VARCHAR (500) NOT NULL,
   model VARCHAR (100) NOT NULL,
   "length" VARCHAR(5000) NOT NULL,

@@ -47,9 +47,9 @@ function errorHandler(error, request, response, next) {
 }
 
 function makeNewVehicle(request,response) {
-  let SQL = 'INSERT INTO vehicles (imag_url, name, model, length, cargo_capacity) VALUES ($1,$2,$3,$4,$5);';
-  let {imag_url, name, model, length, cargo_capacity } = request.body;
-  let values = [imag_url, name, model, length, cargo_capacity];
+  let SQL = 'INSERT INTO vehicles (image_url, name, model, length, cargo_capacity) VALUES ($1,$2,$3,$4,$5);';
+  let {image_url, name, model, length, cargo_capacity } = request.body;
+  let values = [image_url, name, model, length, cargo_capacity];
 
   return client.query(SQL, values)
     .then(response.redirect('/'))
