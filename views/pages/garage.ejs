@@ -23,9 +23,12 @@
             <p><%=vehicle.model%></p>
             <h2>Vehicle Length</h2>
             <p><%=vehicle.length%></p>
-            <h2>Vehicle Cargo Capacity</h2>
-            <p><%=vehicle.cargo_capacity%></p>
           </section>
+        <form method="POST" action="/delete?_method=DELETE">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" value="<%= vehicle.name %>" name="name">
+        <button>Delete Vehicle</button>
+        </form>
         <% }) %>
         </div>
 </main>
