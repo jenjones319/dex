@@ -7,6 +7,8 @@ require('dotenv').config();
 const cors = require('cors');
 const superagent = require('superagent');
 const pg = require('pg');
+const methodOverride = require('method-override');
+
 
 
 const{DATABASE_URL} = process.env;
@@ -21,6 +23,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 app.use(express.json());
 
 const PORT = process.env.PORT;
@@ -30,6 +33,7 @@ app.get('/garage',garageHandler);
 app.get('/',homeHandler);
 app.post('/search',getVehicleData);
 app.post('/garage',makeNewVehicle);
+app.delete('/delete',deleteVehicle);
 
 //Route Handlers
 function homeHandler(request,response) {
@@ -83,6 +87,18 @@ function getVehicleData(request,response) {
       errorHandler(err, request, response);
     });
 }
+function deleteVehicle(request, response) {
+  const SQL = 'DELETE * FROM vehicles WHERE name = $1;';
+
+  let values = [request.query.name];
+  client.query(SQL, values)
+    .then(() => {
+      response.redirect('/');
+    })
+    .catch(err => handleError(err,response));
+
+}
+
 
 function getAboutData (request, response) {
   let viewModel = {
